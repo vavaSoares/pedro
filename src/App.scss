@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+}
+.App {
+    
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: black;
+        color: #ffff;
+        padding: 20px;
+
+    .flor{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        
+        img{
+            width: 60px;
+
+        }
+           
+    } .saida{
+            margin-right: 60px;
+            }
+
+
+    }
+
+    .filtro{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        padding: 30px;
+            input{
+                border-radius:5px 0px 0px 5px;
+                border-color: rgb(0, 0, 0);
+            }
+            .procurar{
+
+                border-radius: 0px 5px 5px 0px;
+                border: 1px solid black;
+                width: 14px;
+                height: 9px;
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                }
+    }
+
+
+
+.pagina-agenda {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh auto;
+    align-items: center;
+    .filha{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 150vh  auto;
+        background-color: #FFFFFF;
+
+        .esquerda{
+            position: fixed;
+            width: 10%;
+            
+
+        }  
+   
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            padding:0vh 0px 0px 20vh;
+            gap: 20px;
+            .react-calendar{
+                margin: 60px;
+                width: 100%;
+            }
+        }
+    
+        .header {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+    
+            button {
+                padding: 12px 25px;
+                font-size: 16px;
+                font-weight: bold;
+                color: #008080;  // Verde água
+                background: transparent;
+                border: 2px solid #008080;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s;
+    
+                &:hover, &.active {
+                    color: #fff;
+                    background-color: #008080;
+                }
+            }
+        }
+    
+        .events-for-day {
+            background: #fff;
+            width: 100%;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+            text-align: center;
+    
+            h3 {
+                color: #008080;
+                font: 100;
+                margin-bottom: 15px;
+            }
+    
+            ul {
+                list-style: none;
+                padding: 0;
+    
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 8px 0;
+                    border-bottom: 1px solid #ddd;
+    
+                    .event-type {
+                        font-weight: bold;
+                        color: #4682B4; // Azul 
+                        &.client { color: #025f5f; } // Verde água
+                        &.personal { color: #218058; } // Verde
+                    }
+                }
+            }
+        }
+    
+        .agenda-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 20px;
+    
+            h3 {
+                font-size: 24px;
+                color: #008080;
+            }
+    
+            .add-event-button, .consult-events-button {
+                background-color: #008080;
+                color: #fff;
+                border: none;
+                padding: 10px 15px;
+                font-size: 16px;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: transform 0.3s;
+    
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    
+        .events {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            overflow-x: auto;
+            width: 100%;
+    
+            table {
+                width: 100%;
+                border-collapse: collapse;
+    
+                th, td {
+                    padding: 15px;
+                    text-align: center;
+                    border-bottom: 1px solid #ddd;
+    
+                    &:first-child { text-align: left; }
+                    &:last-child { text-align: right; }
+                }
+    
+                th {
+                    background-color: #008080;
+                    color: #fff;
+                    font-weight: bold;
+                }
+    
+                td {
+                    .status-pending { color: #FFA500; } // Laranja
+                    .status-complete { color: #008000; } // Verde
+                }
+    
+                button {
+                    margin: 0 5px;
+                    padding: 5px 10px;
+                    border: none;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+    
+                    &:hover {
+                        background-color: #66CDAA; // Verde água mais claro
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+    
+            .popup-content {
+                background: #fff;
+                padding: 30px;
+                width: 90%;
+                max-width: 500px;
+                border-radius: 8px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+                position: relative;
+    
+                h3 {
+                    color: #008080;
+                    margin-bottom: 15px;
+                }
+    
+                .close-btn {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    font-size: 18px;
+                    background: none;
+                    border: none;
+                    color: #999;
+                    cursor: pointer;
+    
+                    &:hover {
+                        color: #FF4081; // Rosa para contraste
+                    }
+                }
+    
+                .form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+    
+                    label {
+                        display: flex;
+                        flex-direction: column;
+                        color: #333;
+    
+                        input, select {
+                            padding: 8px;
+                            font-size: 16px;
+                            border: 1px solid #ddd;
+                            border-radius: 8px;
+                            outline: none;
+                            transition: border-color 0.3s;
+    
+                            &:focus {
+                                border-color: #008080;
+                            }
+                        }
+                    }
+                }
+    
+                .popup-actions {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 15px;
+    
+                    button {
+                        padding: 10px 20px;
+                        border: none;
+                        border-radius: 8px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        transition: background-color 0.3s;
+    
+                        &:first-child {
+                            background-color: #ddd;
+                            color: #333;
+                            &:hover { background-color: #bbb; }
+                        }
+    
+                        &:last-child {
+                            background-color: #008080;
+                            color: #fff;
+                            &:hover { background-color: #006666; }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    
+}
+}
